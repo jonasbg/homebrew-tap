@@ -1,26 +1,26 @@
 class Ted < Formula
   desc "Native code editor"
   homepage "https://github.com/jonasbg/ted"
-  version "0.2.7"
+  version "0.2.8"
 
   on_macos do
     on_arm do
-      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.2.7/ted-Darwin-arm64.tar.gz"
-      sha256 "a66f9a039173e14625d775090bbdf9029c389576fd2ce3c2c7070c9dbcb0239c"
+      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.2.8/ted-Darwin-arm64.tar.gz"
+      sha256 "57628eb001e59ac991dfdba58f1a17922bc2fa0dee4e8a00616c11d5b7c5f6e9"
     end
   end
 
   on_macos do
     on_intel do
-      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.2.7/ted-Darwin-x86_64.tar.gz"
-      sha256 "fcb317ba800604bd8d53cba62c0d2f2f2b8ff51144627b8bc2b52f6f36576f58"
+      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.2.8/ted-Darwin-x86_64.tar.gz"
+      sha256 "fa7e6d7fa886fdce8448f3daf833ee41afd256f4d66f0a5a42ae8307e110375f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.2.7/ted-Linux-x86_64.tar.gz"
-      sha256 "b8f6eb5d98d07b444367e4a41e1ab50b03fcd1af501f4859073540b68dd7c711"
+      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.2.8/ted-Linux-x86_64.tar.gz"
+      sha256 "24223705588568735934efff37fc760b160318fa98655aa3f19b7fcf069cf7e4"
     end
   end
 
