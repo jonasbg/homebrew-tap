@@ -1,26 +1,26 @@
 class Ted < Formula
   desc "Native code editor"
   homepage "https://github.com/jonasbg/ted"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_arm do
-      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.3.1/ted-Darwin-arm64.tar.gz"
-      sha256 "b8c346c2e95ee45bb55b25f85b53f851f7a669899e97b105304b791e1533441f"
+      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.3.2/ted-Darwin-arm64.tar.gz"
+      sha256 "54222bfbabc4d4099ddbd3cfaef92c6da9c2caaa7602ec6a1dd2eecaadf9d693"
     end
   end
 
   on_macos do
     on_intel do
-      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.3.1/ted-Darwin-x86_64.tar.gz"
-      sha256 "8b6e519fdfc1175c7ccd22e829e5461187d8782217795ca002e993dc61fc63f0"
+      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.3.2/ted-Darwin-x86_64.tar.gz"
+      sha256 "037d7383f25d19aab7007b0547c90aa2b46f119d70b5c3ef845fcae61102f396"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.3.1/ted-Linux-x86_64.tar.gz"
-      sha256 "f1443620730bc9f2f509ce5ba5bd03f67109774b05949abfce73560cb28cfa55"
+      url "https://raw.githubusercontent.com/jonasbg/omarchy/main/clients/0.3.2/ted-Linux-x86_64.tar.gz"
+      sha256 "33bcf690cc594909b5beefc35077f05755bda57fceeaa592ee9acb584afdbfc4"
     end
   end
 
@@ -52,6 +52,17 @@ class Ted < Formula
       inreplace "ted.desktop", "@BIN@", (opt_bin/"ted").to_s
       (share/"applications").install "ted.desktop"
     end
+  end
+
+  def caveats
+    return unless OS.mac?
+
+    <<~EOS
+      To open Ted from Spotlight, Launchpad or the Dock, add it to
+      ~/Applications once. It follows every brew upgrade:
+        mkdir -p ~/Applications/ted.app
+        ln -sfn #{opt_prefix}/ted.app/Contents ~/Applications/ted.app/Contents
+    EOS
   end
 
   test do
